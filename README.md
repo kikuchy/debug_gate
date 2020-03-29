@@ -1,12 +1,15 @@
 # 🚪 debug_gate
 
-Show your own debug menu in your app!
+Show your own debug menu in your flutter app!
 
 ![sample](./art/gate.gif)
 
 ## Install
 
-tbd
+```yaml
+dependencies:
+  debug_gate: (please put latest verion here)
+```
 
 ## Usage
 
