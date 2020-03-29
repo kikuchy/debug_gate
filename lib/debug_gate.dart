@@ -61,6 +61,7 @@ class _DebugGateState extends State<DebugGate> {
     bool debugBuild = false;
     assert(() {
       debugBuild = true;
+      return true;
     }());
     return widget.enable ?? debugBuild;
   }
