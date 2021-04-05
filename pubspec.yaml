@@ -1,10 +1,10 @@
 name: debug_gate
 description: Show your own debug menu in your flutter app!
-version: 1.0.0
+version: 2.0.0
 homepage: https://github.com/kikuchy/debug_gate
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
   flutter:

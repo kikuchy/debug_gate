@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 /// This widget shows the your original screen when the screen is hit repeatedly.
 class DebugGate extends StatefulWidget {
   final int tapCount;
-  final bool enable;
+  final bool? enable;
   final Duration tapInterval;
   final Widget child;
   final Widget Function(BuildContext) debugMenuBuilder;
@@ -13,21 +13,21 @@ class DebugGate extends StatefulWidget {
   /// This widget shows the screen [debugMenuBuilder] builds when the user taps the screen [tapCount] in [tapInterval].
   ///
   /// This widget shows the specified menu on debug mode (debug build) except [enable] is specified.
-  const DebugGate(
-      {@required this.tapCount,
-      @required this.tapInterval,
-      @required this.child,
-      @required this.debugMenuBuilder,
-      this.enable,
-      Key key})
-      : super(key: key);
+  const DebugGate({
+    required this.tapCount,
+    required this.tapInterval,
+    required this.child,
+    required this.debugMenuBuilder,
+    this.enable,
+    Key? key,
+  }) : super(key: key);
 
   @override
   _DebugGateState createState() => _DebugGateState();
 }
 
 class _DebugGateState extends State<DebugGate> {
-  int _count;
+  late int _count;
 
   @override
   void initState() {
